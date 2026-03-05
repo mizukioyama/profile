@@ -16,7 +16,17 @@
       padding: 0;
       box-sizing: border-box;
     }
+@media (min-width: 800px) {
+  .pc-message {
+    display: block;
+    font-size: 16px;
+    color: #666;
+  }
+}
 
+
+        /* ===== Mobile optimization ===== */
+    @media (min-width: 800px) {
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       background: #ffceef40;
@@ -68,6 +78,8 @@
       font-size: 14px;
       font-weight: bold;
       transition: 0.3s;
+      position: relative;
+      z-index: -10;
     }
 
     .insta-btn:hover {
@@ -82,17 +94,16 @@
         transform: translate(-50%,0);
     }
 
-    /* ===== Mobile optimization ===== 
-    @media (min-width: 800px) {
-      body {
-        background: #e9eef3;
-      }
-    }*/
+    .haru-img img {
+        width: 100%;
+    }
+
+    }
 
   </style>
 </head>
 
-<body>
+<body class="pc-message">
 
   <div class="card">
     <span>おやま はるこ</span>
