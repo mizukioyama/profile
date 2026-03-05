@@ -1,142 +1,152 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>haru♪</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haru♪</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Yomogi&display=swap" rel="stylesheet">
+    <!-- icon 32x32 -->
+    <link rel="icon" type="image/png" href="img/icon750.png" sizes="32x32">
+    <!-- 192x192（AndroidやChrome用） -->
+    <link rel="icon" type="image/png" href="img/icon750.png" sizes="192x192">
+    <!-- Apple デバイス向け -->
+    <link rel="apple-touch-icon" href="img/icon750.png">
 
-  <style>
-    /* ===== Reset ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-@media (min-width: 800px) {
-  .pc-message {
-    display: block;
-    font-size: 16px;
-    color: #666;
-  }
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Yomogi&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 800px) {
+            .pc-message {
+                display: block;
+                font-size: 16px;
+                color: #666;
+            }
+        }
 
 
         /* ===== Mobile optimization ===== */
-    @media (min-width: 800px) {
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-      background: #ffceef40;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      background-image: url("img/bg-img.png");
-      font-family: "Yomogi", cursive, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    }
+        @media (min-width: 800px) {
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+                background: #ffceef40;
+                color: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 20px;
+                background-image: url("img/bg-img.png");
+                font-family: "Yomogi", cursive, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
 
-    /* ===== Card ===== */
-    .card {
-      width: 100%;
-      max-width: 420px;
-      background: #fff;
-      border-radius: 20px;
-      padding: 40px 24px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
+            /* ===== Card ===== */
+            .card {
+                width: 100%;
+                max-width: 420px;
+                background: #fff;
+                border-radius: 20px;
+                padding: 40px 24px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+                text-align: center;
+            }
 
-    .name {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 16px;
-      letter-spacing: 1px;
-    }
+            .name {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 16px;
+                letter-spacing: 1px;
+            }
 
-    .profile {
-      font-size: 15px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      color: #555;
-    }
+            .profile {
+                font-size: 15px;
+                line-height: 1.8;
+                margin-bottom: 30px;
+                color: #555;
+            }
 
-    .insta-btn {
-      display: inline-block;
-      text-decoration: none;
-      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
-      color: #fff;
-      padding: 14px 24px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: bold;
-      transition: 0.3s;
-      position: relative;
-      z-index: -10;
-    }
+            .insta-btn {
+                display: inline-block;
+                text-decoration: none;
+                background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+                background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+                /*グラデーション①*/
+                color: #fff;
+                padding: 14px 24px;
+                border-radius: 50px;
+                font-size: 14px;
+                font-weight: bold;
+                transition: 0.3s;
+                position: relative;
+                z-index: -10;
+            }
 
-    .insta-btn:hover {
-      opacity: 0.8;
-    }
+            .insta-btn:hover {
+                opacity: 0.8;
+            }
 
-    .haru-img {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 50%;
-        transform: translate(-50%,0);
-    }
+            .haru-img {
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 50%;
+                transform: translate(-50%, 0);
+            }
 
-    .haru-img img {
-        width: 100%;
-    }
+            .haru-img img {
+                width: 100%;
+            }
 
-    }
-
-  </style>
+        }
+    </style>
 </head>
 
 <body class="pc-message">
 
-  <div class="card">
-    <span>おやま はるこ</span>
-    <h2 class="name">小山 春子</h2>
+    <div class="card">
+        <span>おやま はるこ</span>
+        <h2 class="name">小山 春子</h2>
 
-    <div class="profile">
-        <p>
-      子育て歴30年
-      <br>
-      カウンセラー歴 15年
-      <br>
-      NLP / 色彩心理
-      <br>
-      EFカード / TA
-      <br>
-      アンガーマネジメント
-      <br>
-      ヒプノ / 薬膳 / 腸活
-      <br>
-      舌診断 / etc...
-        </p>
+        <div class="profile">
+            <p>
+                子育て歴30年
+                <br>
+                カウンセラー歴 15年
+                <br>
+                NLP / 色彩心理
+                <br>
+                EFカード / TA
+                <br>
+                アンガーマネジメント
+                <br>
+                ヒプノ / 薬膳 / 腸活
+                <br>
+                舌診断 / etc...
+            </p>
+        </div>
+
+        <a class="insta-btn" href="https://www.instagram.com/haruko.oyama.5?igsh=OHYzM2x0dGhmZXBt" target="_blank">
+            Instagramを見る
+        </a>
+
+        <div class="haru-img">
+            <img src="img/パターン１４.png" alt="イメージキャラクター">
+        </div>
     </div>
-
-    <a class="insta-btn" 
-       href="https://www.instagram.com/haruko.oyama.5?igsh=OHYzM2x0dGhmZXBt" 
-       target="_blank">
-       Instagramを見る
-    </a>
-
-    <div class="haru-img">
-        <img src="img/パターン１４.png" alt="イメージキャラクター">
-    </div>
-  </div>
 
 </body>
+
 </html>
